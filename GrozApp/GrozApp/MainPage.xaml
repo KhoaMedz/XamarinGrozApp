@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrozApp.MainPage"
+            xmlns:localPages ="clr-namespace:GrozApp"
+            NavigationPage.HasNavigationBar="False"
+            BarBackgroundColor="#ca864d"
+            SelectedTabColor="Black"
+            UnselectedTabColor="White"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            >
+    <localPages:HomePage Title="Home" IconImageSource="home.png"/>
+    <localPages:CategoryPage Title="Category" IconImageSource="category.png"/>
+    <localPages:ChatPage Title="Chat" IconImageSource="chat.png"/>
+    <localPages:CartPage Title="Cart" IconImageSource="cart.png"/>
+    <localPages:UserPage Title="User" IconImageSource="user.png"/>
+
+</TabbedPage>
+
+

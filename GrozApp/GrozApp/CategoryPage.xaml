@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrozApp.CategoryPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <!--Heading Begin-->
+                <Frame x:Name="Heading" Grid.Row="0" Grid.ColumnSpan="4" HeightRequest="40" BackgroundColor="#ffedd2" Padding="5,10,5,10">
+                    <Grid ColumnDefinitions="*, 2*, 2*">
+                        <Image Source="logo.png" Grid.Column="0"/>
+                        <Entry Placeholder="Search" Grid.Column="1" Grid.ColumnSpan="2" Margin="20,0,0,0"/>
+                    </Grid>
+                </Frame>
+                <!--Heading End-->
+
+                <!--List View Begin-->
+                <ListView VerticalOptions="FillAndExpand"
+                            RowHeight="175"
+                            x:Name="lvProductType"
+                          ItemSelected="cmdChonLoaiSanPham">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout BackgroundColor="Transparent">
+                                    <Frame BorderColor="black" Margin="10,10,10,10" CornerRadius="20" BackgroundColor="#FCE0A6">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="80"/>
+                                                <RowDefinition />
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Image Grid.Row="0" Grid.Column="0" Source="{Binding hinhThuNhat}"/>
+                                            <Image Grid.Row="0" Grid.Column="1" Source="{Binding hinhThuHai}"/>
+                                            <Image Grid.Row="0" Grid.Column="2" Source="{Binding hinhThuBa}"/>
+                                            <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalOptions="Center"
+                                                   Text="{Binding tenLoai}"
+                                                   FontSize="25" TextColor="Black" FontAttributes="Bold"/>
+                                        </Grid>
+                                    </Frame>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            <!--List View End-->
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

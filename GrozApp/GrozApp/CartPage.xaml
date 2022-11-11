@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrozApp.CartPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <!--Heading Begin-->
+                <Frame x:Name="Heading" Grid.Row="0" Grid.ColumnSpan="4" HeightRequest="40" BackgroundColor="#ffedd2" Padding="5,10,5,10">
+                    <Grid ColumnDefinitions="*, 2*, 2*">
+                        <Image Source="logo.png" Grid.Column="0"/>
+                        <Entry Placeholder="Search" Grid.Column="1" Grid.ColumnSpan="2" Margin="20,0,0,0"/>
+                    </Grid>
+                </Frame>
+                <!--Heading End-->
+
+                <Label Text="Giỏ Hàng Của Bạn" FontSize="30" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center"/>
+
+                <!--<Grid RowDefinitions="auto, auto, auto" ColumnDefinitions="*, 2*, *" BackgroundColor="#C8E2B1" Padding="5,5,5,5">
+                    <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Source="ao1.jpg"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Ao 01" TextColor="black" FontSize="17" Margin="10,0,0,0"/>
+                    <Image Grid.Row="0" Grid.Column="2" Source="close.png" HeightRequest="20"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="1.000.000 đ" TextColor="red" FontSize="17" Margin="10,0,0,0"/>
+                    <Entry Placeholder="Số lượng" Grid.Row="2" Grid.Column="1" VerticalOptions="StartAndExpand" Margin="10,0,0,0"/>
+                </Grid>
+                <Grid RowDefinitions="auto, auto, auto" ColumnDefinitions="*, 2*, *" BackgroundColor="#C8E2B1" Padding="5,5,5,5">
+                    <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Source="ao2.jpg"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Ao 02" TextColor="black" FontSize="17" Margin="10,0,0,0"/>
+                    <Image Grid.Row="0" Grid.Column="2" Source="close.png" HeightRequest="20"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="2.000.000 đ" TextColor="red" FontSize="17" Margin="10,0,0,0"/>
+                    <Entry Placeholder="Số lượng" Grid.Row="2" Grid.Column="1" VerticalOptions="StartAndExpand" Margin="10,0,0,0"/>
+                </Grid>
+                <Grid RowDefinitions="auto, auto, auto" ColumnDefinitions="*, 2*, *" BackgroundColor="#C8E2B1" Padding="5,5,5,5">
+                    <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Source="ao3.jpg"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Ao 03" TextColor="black" FontSize="17" Margin="10,0,0,0"/>
+                    <Image Grid.Row="0" Grid.Column="2" Source="close.png" HeightRequest="20"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="500.000 đ" TextColor="red" FontSize="17" Margin="10,0,0,0"/>
+                    <Entry Placeholder="Số lượng" Grid.Row="2" Grid.Column="1" VerticalOptions="StartAndExpand" Margin="10,0,0,0"/>
+                </Grid>
+                <Grid RowDefinitions="auto, auto, auto" ColumnDefinitions="*, 2*, *" BackgroundColor="#C8E2B1" Padding="5,5,5,5">
+                    <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Source="ao4.jpg"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Ao 04" TextColor="black" FontSize="17" Margin="10,0,0,0"/>
+                    <Image Grid.Row="0" Grid.Column="2" Source="close.png" HeightRequest="20"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="700.000 đ" TextColor="red" FontSize="17" Margin="10,0,0,0"/>
+                    <Entry Placeholder="Số lượng" Grid.Row="2" Grid.Column="1" VerticalOptions="StartAndExpand" Margin="10,0,0,0"/>
+                </Grid>-->
+
+                <ListView VerticalOptions="FillAndExpand"
+                            RowHeight="125"
+                            x:Name="lvCartItem"
+                          BackgroundColor="#FFF1D5"
+                          >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid RowDefinitions="auto, auto, auto" ColumnDefinitions="*, 2*, .2*" Padding="5,5,5,5">
+                                    <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Source="{Binding hinhSanPham}"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding tenSanPham}" TextColor="black" FontSize="20" Margin="10,0,0,0"/>
+                                    <ImageButton Grid.Row="0" Grid.Column="2" Source="close.png" HeightRequest="20" Clicked="imageButtonDeleteCartItem"/>
+                                    <StackLayout Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                                        <Label Text="{Binding giaSanPham}" TextColor="red" FontSize="20" Margin="10,0,0,0"/>
+                                        <Label Text="$" TextColor="red" FontSize="17"/>
+                                    </StackLayout>
+                                    <StackLayout Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
+                                        <Label Text="Số lượng: " FontSize="20" Margin="10,0,0,0"/>
+                                        <Label   Text="{Binding soLuong}" FontSize="20" Margin="10,0,0,0"/>
+                                    </StackLayout>
+
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <Grid ColumnDefinitions="*,*">
+                    <Label Grid.Column="0" Text="Thành Tiền" TextColor="Black" FontSize="20" Margin="20,0,0,0"/>
+                    <Label x:Name="lblTongTien" Grid.Column="1" Text="0 $" TextColor="red" FontSize="20" HorizontalTextAlignment="End" Margin="0,0,20,0"/>
+                </Grid>
+
+                <Button Text="Đặt Hàng" TextColor="White" FontSize="20" FontAttributes="Bold" BackgroundColor="#ff8d15" Margin="30,10,30,10" CornerRadius="10" Clicked="cmdThanhToan" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

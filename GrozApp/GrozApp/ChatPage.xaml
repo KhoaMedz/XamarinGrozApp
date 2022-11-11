@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="GrozApp.ChatPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--Heading Begin-->
+            <Frame x:Name="Heading" HeightRequest="40" BackgroundColor="#ffedd2" Padding="5,10,5,10">
+                <Grid ColumnDefinitions="*, 2*, 2*">
+                    <Image Source="logo.png" Grid.Column="0"/>
+                    <Entry Placeholder="Search" Grid.Column="1" Grid.ColumnSpan="2" Margin="20,0,0,0"/>
+                </Grid>
+            </Frame>
+            <!--Heading End-->
+
+            <!--Tab View Begin-->
+            <xct:TabView
+                TabStripPlacement="Top"
+                TabStripBackgroundColor="#eeb36f"
+                TabStripHeight="60"
+                TabIndicatorColor="white"
+                TabContentBackgroundColor="#fffcf6">
+
+                <xct:TabViewItem
+                    Icon="triangle.png"
+                    Text="Tất Cả"
+                    TextColor="Black"
+                    TextColorSelected="white"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    FontSizeSelected="25"
+                    VerticalOptions="CenterAndExpand">
+                    <ScrollView>
+                        <StackLayout>
+                            <Grid RowDefinitions="auto, auto, auto, auto" ColumnDefinitions="*,3*,*" Margin="0,20,0,0" BackgroundColor="#FFE7BA">
+                                <Image Grid.Column="0" Grid.RowSpan="3" Source="store.png" HeightRequest="60"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Shop" FontSize="20" TextColor="Black"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="TP. HCM" FontSize="15" />
+                                <BoxView Grid.Row="1" Grid.Column="2" BackgroundColor="#00CC33" HeightRequest="10" Margin="0,0,60,0" CornerRadius="10"/>
+                            </Grid>
+                            <Grid RowDefinitions="auto, auto, auto, auto" ColumnDefinitions="*,3*,*" Margin="0,0,0,0" BackgroundColor="#FFE7BA">
+                                <Image Grid.Column="0" Grid.RowSpan="3" Source="store.png" HeightRequest="60"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Shop" FontSize="20" TextColor="Black"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="TP. HCM" FontSize="15" />
+                                <BoxView Grid.Row="1" Grid.Column="2" BackgroundColor="Gray" HeightRequest="10" Margin="0,0,60,0" CornerRadius="10"/>
+                            </Grid>
+                            <Grid RowDefinitions="auto, auto, auto, auto" ColumnDefinitions="*,3*,*" Margin="0,0,0,0" BackgroundColor="#FFE7BA">
+                                <Image Grid.Column="0" Grid.RowSpan="3" Source="store.png" HeightRequest="60"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Shop" FontSize="20" TextColor="Black"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="TP. HCM" FontSize="15" />
+                                <BoxView Grid.Row="1" Grid.Column="2" BackgroundColor="Gray" HeightRequest="10" Margin="0,0,60,0" CornerRadius="10"/>
+                            </Grid>
+                            <Grid RowDefinitions="auto, auto, auto, auto" ColumnDefinitions="*,3*,*" Margin="0,0,0,0" BackgroundColor="#FFE7BA">
+                                <Image Grid.Column="0" Grid.RowSpan="3" Source="store.png" HeightRequest="60"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Shop" FontSize="20" TextColor="Black"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="TP. HCM" FontSize="15" />
+                                <BoxView Grid.Row="1" Grid.Column="2" BackgroundColor="#00CC33" HeightRequest="10" Margin="0,0,60,0" CornerRadius="10"/>
+                            </Grid>
+                            <Grid RowDefinitions="auto, auto, auto, auto" ColumnDefinitions="*,3*,*" Margin="0,0,0,0" BackgroundColor="#FFE7BA">
+                                <Image Grid.Column="0" Grid.RowSpan="3" Source="store.png" HeightRequest="60"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Shop" FontSize="20" TextColor="Black"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="TP. HCM" FontSize="15" />
+                                <BoxView Grid.Row="1" Grid.Column="2" BackgroundColor="#00CC33" HeightRequest="10" Margin="0,0,60,0" CornerRadius="10"/>
+                            </Grid>
+                            <Grid RowDefinitions="auto, auto, auto, auto" ColumnDefinitions="*,3*,*" Margin="0,0,0,0" BackgroundColor="#FFE7BA">
+                                <Image Grid.Column="0" Grid.RowSpan="3" Source="store.png" HeightRequest="60"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Shop" FontSize="20" TextColor="Black"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="TP. HCM" FontSize="15" />
+                                <BoxView Grid.Row="1" Grid.Column="2" BackgroundColor="Gray" HeightRequest="10" Margin="0,0,60,0" CornerRadius="10"/>
+                            </Grid>
+                            <Grid RowDefinitions="auto, auto, auto, auto" ColumnDefinitions="*,3*,*" Margin="0,0,0,0" BackgroundColor="#FFE7BA">
+                                <Image Grid.Column="0" Grid.RowSpan="3" Source="store.png" HeightRequest="60"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Shop" FontSize="20" TextColor="Black"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="TP. HCM" FontSize="15" />
+                                <BoxView Grid.Row="1" Grid.Column="2" BackgroundColor="#00CC33" HeightRequest="10" Margin="0,0,60,0" CornerRadius="10"/>
+                            </Grid>
+                            <Grid RowDefinitions="auto, auto, auto, auto" ColumnDefinitions="*,3*,*" Margin="0,0,0,0" BackgroundColor="#FFE7BA">
+                                <Image Grid.Column="0" Grid.RowSpan="3" Source="store.png" HeightRequest="60"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Shop" FontSize="20" TextColor="Black"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="TP. HCM" FontSize="15" />
+                                <BoxView Grid.Row="1" Grid.Column="2" BackgroundColor="#00CC33" HeightRequest="10" Margin="0,0,60,0" CornerRadius="10"/>
+                            </Grid>
+                        </StackLayout>
+                    </ScrollView>
+                </xct:TabViewItem>
+
+                <xct:TabViewItem
+                    Icon="circle.png"
+                    Text="Đã Đọc"
+                    TextColor="Black"
+                    TextColorSelected="white"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    FontSizeSelected="25">
+                    <ScrollView>
+                        <StackLayout>
+                            <Grid RowDefinitions="auto, auto, auto, auto" ColumnDefinitions="*,3*,*" Margin="0,20,0,0" BackgroundColor="#FFE7BA">
+                                <Image Grid.Column="0" Grid.RowSpan="3" Source="store.png" HeightRequest="60"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Shop" FontSize="20" TextColor="Black"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="TP. HCM" FontSize="15" />
+                                <BoxView Grid.Row="1" Grid.Column="2" BackgroundColor="#00CC33" HeightRequest="10" Margin="0,0,60,0" CornerRadius="10"/>
+                            </Grid>
+                            <Grid RowDefinitions="auto, auto, auto, auto" ColumnDefinitions="*,3*,*" Margin="0,0,0,0" BackgroundColor="#FFE7BA">
+                                <Image Grid.Column="0" Grid.RowSpan="3" Source="store.png" HeightRequest="60"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Shop" FontSize="20" TextColor="Black"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="TP. HCM" FontSize="15" />
+                                <BoxView Grid.Row="1" Grid.Column="2" BackgroundColor="Gray" HeightRequest="10" Margin="0,0,60,0" CornerRadius="10"/>
+                            </Grid>
+                            <Grid RowDefinitions="auto, auto, auto, auto" ColumnDefinitions="*,3*,*" Margin="0,0,0,0" BackgroundColor="#FFE7BA">
+                                <Image Grid.Column="0" Grid.RowSpan="3" Source="store.png" HeightRequest="60"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Shop" FontSize="20" TextColor="Black"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="TP. HCM" FontSize="15" />
+                                <BoxView Grid.Row="1" Grid.Column="2" BackgroundColor="#00CC33" HeightRequest="10" Margin="0,0,60,0" CornerRadius="10"/>
+                            </Grid>
+                            <Grid RowDefinitions="auto, auto, auto, auto" ColumnDefinitions="*,3*,*" Margin="0,0,0,0" BackgroundColor="#FFE7BA">
+                                <Image Grid.Column="0" Grid.RowSpan="3" Source="store.png" HeightRequest="60"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Shop" FontSize="20" TextColor="Black"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="TP. HCM" FontSize="15" />
+                                <BoxView Grid.Row="1" Grid.Column="2" BackgroundColor="Gray" HeightRequest="10" Margin="0,0,60,0" CornerRadius="10"/>
+                            </Grid>
+                        </StackLayout>
+                    </ScrollView>
+                </xct:TabViewItem>
+
+                <xct:TabViewItem
+                    Icon="circle.png"
+                    Text="Chưa Đọc"
+                    TextColor="Black"
+                    TextColorSelected="white"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    FontSizeSelected="25">
+                    <ScrollView>
+                        <StackLayout>
+                            <Grid RowDefinitions="auto, auto, auto, auto" ColumnDefinitions="*,3*,*" Margin="0,20,0,0" BackgroundColor="#FFE7BA">
+                                <Image Grid.Column="0" Grid.RowSpan="3" Source="store.png" HeightRequest="60"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Shop" FontSize="20" TextColor="Black"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="TP. HCM" FontSize="15" />
+                                <BoxView Grid.Row="1" Grid.Column="2" BackgroundColor="#00CC33" HeightRequest="10" Margin="0,0,60,0" CornerRadius="10"/>
+                            </Grid>
+                            <Grid RowDefinitions="auto, auto, auto, auto" ColumnDefinitions="*,3*,*" Margin="0,0,0,0" BackgroundColor="#FFE7BA">
+                                <Image Grid.Column="0" Grid.RowSpan="3" Source="store.png" HeightRequest="60"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Shop" FontSize="20" TextColor="Black"/>
+                                <Label Grid.Row="1" Grid.Column="1" Text="TP. HCM" FontSize="15" />
+                                <BoxView Grid.Row="1" Grid.Column="2" BackgroundColor="Gray" HeightRequest="10" Margin="0,0,60,0" CornerRadius="10"/>
+                            </Grid>
+                        </StackLayout>
+                    </ScrollView>
+                </xct:TabViewItem>
+            </xct:TabView>
+            <!--Tab View End-->
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

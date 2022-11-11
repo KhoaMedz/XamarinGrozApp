@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrozApp.UserPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <!--Heading Begin-->
+                <Frame x:Name="Heading" Grid.Row="0" Grid.ColumnSpan="4" HeightRequest="40" BackgroundColor="#ffedd2" Padding="5,10,5,10">
+                    <Grid ColumnDefinitions="*, 2*,2*">
+                        <Image Source="logo.png" Grid.Column="0"/>
+                        <Button Grid.Column="1" Text="Đăng Nhập" Background="#ff8d15" TextColor="White" Margin="2,2,2,2" Clicked="cmdDangNhap"/>
+                        <Button Grid.Column="2" Text="Đăng Ký" Background="#ff8d15" TextColor="White" Margin="2,2,2,2" Clicked="cmdDangKy"/>
+                    </Grid>
+                </Frame>
+                <!--Heading End-->
+
+                <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" FontSize="18" Margin="10,5,0,5" Text="Đơn Hàng Của Tôi" TextColor="Black"/>
+
+                <!--Frame Đơn Hàng Của Tôi Begin-->
+                <Frame Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="#ffedd2" HeightRequest="100">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <ImageButton Grid.Row="0" Grid.Column="0" Source="loading.png" HeightRequest="65" BackgroundColor="Transparent"/>
+                        <ImageButton Grid.Row="0" Grid.Column="1" Source="box.png" HeightRequest="65" BackgroundColor="Transparent"/>
+                        <ImageButton Grid.Row="0" Grid.Column="2" Source="delivery.png" HeightRequest="65" BackgroundColor="Transparent"/>
+                        <ImageButton Grid.Row="0" Grid.Column="3" Source="checkmark.png" HeightRequest="65" BackgroundColor="Transparent"/>
+                        <Label  Grid.Row="1" Grid.Column="0" Text="Chờ Xác Nhận" HorizontalOptions="Center" TextColor="Black" Margin="0,5,0,0"/>
+                        <Label  Grid.Row="1" Grid.Column="1" Text="Đang Xử Lý" HorizontalOptions="Center" TextColor="Black" Margin="0,5,0,0"/>
+                        <Label  Grid.Row="1" Grid.Column="2" Text="Đang Giao" HorizontalOptions="Center" TextColor="Black" Margin="0,5,0,0"/>
+                        <Label  Grid.Row="1" Grid.Column="3" Text="Đã Giao" HorizontalOptions="Center" TextColor="Black" Margin="0,5,0,0"/>
+                    </Grid>
+                </Frame>
+                <!--Frame Đơn Hàng Của Tôi End-->
+
+                <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4" FontSize="18" Margin="10,5,0,5" Text="Tiện Ích" TextColor="Black"/>
+
+                <!--Frame Tiện Ích Begin-->
+                <Frame Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" BackgroundColor="#ffedd2" HeightRequest="100">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <ImageButton Grid.Row="0" Grid.Column="0" Source="dollar.png" HeightRequest="65" BackgroundColor="Transparent"/>
+                        <ImageButton Grid.Row="0" Grid.Column="1" Source="ticket.png" HeightRequest="65" BackgroundColor="Transparent"/>
+                        <ImageButton Grid.Row="0" Grid.Column="2" Source="wallet.png" HeightRequest="65" BackgroundColor="Transparent"/>
+                        <ImageButton Grid.Row="0" Grid.Column="3" Source="headphones.png" HeightRequest="65" BackgroundColor="Transparent"/>
+                        <Label  Grid.Row="1" Grid.Column="0" Text="Groz Xu" HorizontalOptions="Center" TextColor="Black" Margin="0,5,0,0"/>
+                        <Label  Grid.Row="1" Grid.Column="1" Text="Voucher" HorizontalOptions="Center" TextColor="Black" Margin="0,5,0,0"/>
+                        <Label  Grid.Row="1" Grid.Column="2" Text="Ví GrozPlay" HorizontalOptions="Center" TextColor="Black" Margin="0,5,0,0"/>
+                        <Label  Grid.Row="1" Grid.Column="3" Text="Hỗ Trợ" HorizontalOptions="Center" TextColor="Black" Margin="0,5,0,0"/>
+                    </Grid>
+                </Frame>
+                <!--Frame Tiện Ích End-->
+
+                <!--Groz Rewards Grid Begin-->
+                <Grid Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" ColumnDefinitions="*,3*,*" Margin="0,15,0,0" BackgroundColor="#FFCC99">
+                    <Image Grid.Column="0" Source="giftbox.png" HeightRequest="50"/>
+                    <Label Grid.Column="1" Text="Groz Rewards" VerticalOptions="EndAndExpand" TextColor="Black" FontSize="20"/>
+                    <Image Grid.Column="2" Source="skiptrack.png" HeightRequest="30" Margin="0,8,0,8"/>
+                </Grid>
+                <!--Groz Rewards Grid End-->
+
+                <!--Đã Thích Grid Begin-->
+                <Grid Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="4" ColumnDefinitions="*,3*,*" Margin="0,1,0,0" BackgroundColor="#FFCC99">
+                    <Image Grid.Column="0" Source="heart.png" HeightRequest="50"/>
+                    <Label Grid.Column="1" Text="Đã Thích" VerticalOptions="EndAndExpand" TextColor="Black" FontSize="20"/>
+                    <Image Grid.Column="2" Source="skiptrack.png" HeightRequest="30" Margin="0,8,0,8"/>
+                </Grid>
+                <!--Đã Thích Grid End-->
+
+                <!--Đã Đánh Giá Grid Begin-->
+                <Grid Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="4" ColumnDefinitions="*,3*,*" Margin="0,1,0,0" BackgroundColor="#FFCC99">
+                    <Image Grid.Column="0" Source="star.png" HeightRequest="50"/>
+                    <Label Grid.Column="1" Text="Đã Đánh Giá" VerticalOptions="EndAndExpand" TextColor="Black" FontSize="20"/>
+                    <Image Grid.Column="2" Source="skiptrack.png" HeightRequest="30" Margin="0,8,0,8"/>
+                </Grid>
+                <!--Đã Đánh Giá Grid End-->
+
+                <!--Chat Với Groz Grid Begin-->
+                <Grid Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="4" ColumnDefinitions="*,3*,*" Margin="0,1,0,10" BackgroundColor="#FFCC99">
+                    <Image Grid.Column="0" Source="comment.png" HeightRequest="50"/>
+                    <Label Grid.Column="1" Text="Chat Với Groz" VerticalOptions="EndAndExpand" TextColor="Black" FontSize="20"/>
+                    <Image Grid.Column="2" Source="skiptrack.png" HeightRequest="30" Margin="0,8,0,8"/>
+                </Grid>
+                <!--Chat Với Groz Grid End-->
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrozApp.SignUpPage">
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="Đăng Ký" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Center" FontSize="20" Margin="0, 0, 75, 0" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="entryHoTen" Placeholder="Họ tên" Margin="0,20,0,0"/>
+            <Entry x:Name="entrySoDienThoai" Placeholder="Số điện thoại"  Margin="0,10,0,0"/>
+            <Entry x:Name="entryEmail" Placeholder="Email" Margin="0,10,0,0"/>
+            <Entry x:Name="entryMatKhau" Placeholder="Mật Khẩu" IsPassword="true" Margin="0,10,0,0"/>
+            <Entry x:Name="entryNgaySinh" Placeholder="Ngày sinh dd-mm-yyyy" Margin="0,10,0,0"/>
+            <StackLayout Orientation="Horizontal">
+                <RadioButton Content="Nam"/>
+                <RadioButton Content="Nữ" IsChecked="true" CheckedChanged="RadioButton_CheckedChanged"/>
+            </StackLayout>
+            <Grid ColumnDefinitions="*,3*">
+                <CheckBox Grid.Column="0" IsChecked="true" />
+                <Label Grid.Column="1" Text="Chấp nhận điều khoản sử dụng" FontSize="20" Margin="-70,0,0,0"/>
+            </Grid>
+            <Button Text="Đăng Ký" CornerRadius="10" BackgroundColor="#ff8d15" TextColor="white" FontAttributes="Bold" FontSize="20" Margin="10,0,10,0" Clicked="cmdDangKy"/>
+            <Label Margin="10" HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Bạn đã có tài khoản? " FontSize="20"/>
+                        <Span Text="Đăng nhập" TextDecorations="Underline" TextColor="#ff8d15" FontSize="25"/>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="cmdDangNhap"/>
+                </Label.GestureRecognizers>
+            </Label>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrozApp.productDetailsPage">
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label x:Name="lblTittle" Text="Chi Tiết Sản Phẩm" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Center" FontSize="20" Margin="0, 0, 75, 0" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <!--List View Begin-->
+                <ListView VerticalOptions="FillAndExpand"
+                            RowHeight="500"
+                            x:Name="lvProductDetails"
+                          BackgroundColor="#FFF1D5"
+                          >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Image Source="{Binding hinhSanPham}" HeightRequest="300" Aspect="AspectFill"/>
+                                    <Label Text="{Binding tenSanPham}" TextColor="Black" FontSize="35" FontAttributes="Bold"
+                                           Margin="10,0,0,0"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding giaSanPham}" TextColor="red" FontSize="30" FontAttributes="Bold"
+                                           Margin="10,0,0,0"/>
+                                        <Label Text="$" TextColor="red" FontSize="30" FontAttributes="Bold"
+                                           Margin="10,0,0,0"/>
+                                    </StackLayout>
+                                    <Label Text="Mô tả chi tiết sản phẩm" FontSize="18" Margin="10,0,0,0"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="rating.png" HorizontalOptions="Start" HeightRequest="75" Margin="10,0,0,0"/>
+                                        <Label Text=" (58 Đánh Giá)" VerticalOptions="CenterAndExpand"/>
+                                        <Label Text="{Binding moTaSanPham}" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Margin="0,0,10,0"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <!--List View End-->
+                <StackLayout BackgroundColor="#FFF1D5">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Số lượng" FontSize="20" FontAttributes="Bold" VerticalOptions="Center"
+                                           Margin="10,0,0,0"/>
+                        <Entry x:Name="entrySoLuong" Text="1" Margin="20,0,0,0" Keyboard="Numeric"/>
+                    </StackLayout>
+                    <Button x:Name="btnThemVaoGioHang" BackgroundColor="#ff8d15" Text="Thêm Vào Giỏ Hàng" TextColor="White" FontAttributes="Bold" 
+                                            FontSize="20" CornerRadius="10" Margin="10" Clicked="btnThemVaoGioHang_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
